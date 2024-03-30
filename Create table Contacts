@@ -1,0 +1,8 @@
+CREATE TABLE Contacts(
+    Address VARCHAR2(50) NOT NULL PRIMARY KEY,
+    Name VARCHAR2(50) NOT NULL,
+    AdressBook VARCHAR2(50),
+    UserAddress VARCHAR2(50),
+    FOREIGN KEY(AdressBook, UserAddress) REFERENCES AddressBooks(Name, UserAddress),
+    FOREIGN KEY(Address) REFERENCES MailAddresses(Address)
+);
