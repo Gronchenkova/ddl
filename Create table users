@@ -1,0 +1,8 @@
+CREATE TABLE Users (
+    Address VARCHAR2(50) NOT NULL PRIMARY KEY,
+    SentAt Date NOT NULL,
+    FirstName VARCHAR2(50),
+    SecondName VARCHAR2(50),
+    Password VARCHAR2(50) NOT NULL,
+    FOREIGN KEY(Address) REFERENCES MailAddresses(Address),
+);
