@@ -1,0 +1,6 @@
+CREATE TABLE AddressBooks(
+    Name VARCHAR2(50) NOT NULL,
+    UserAddress VARCHAR2(50),
+    PRIMARY KEY(Name, UserAddress),    
+    FOREIGN KEY(UserAddress) REFERENCES Users(Address)
+);
