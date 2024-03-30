@@ -1,0 +1,11 @@
+CREATE TABLE Letter (
+    Id NUMBER GENERATED ALWAYS AS IDENTITY NOT NULL PRIMARY KEY,
+    SentAt Date NOT NULL,
+    Theme VARCHAR2(100),
+    Text VARCHAR2(500),
+    SenderAddress VARCHAR2(50),
+    RecipientAddress VARCHAR2(50),
+    bRead BOOLEAN DEFAULT 0 NOT NULL,
+    FOREIGN KEY(SenderAddress) REFERENCES MailAddresses(Address),
+    FOREIGN KEY(RecipientAddress) REFERENCES MailAddresses(Address)
+);
